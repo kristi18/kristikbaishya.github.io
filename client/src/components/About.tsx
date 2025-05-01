@@ -3,7 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const About = () => {
   return (
-    <section id="about" className="py-20 bg-white dark:bg-gray-800">
+    <section id="about" className="py-20 bg-slate-50 dark:bg-gray-900">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
@@ -12,23 +12,19 @@ const About = () => {
             </h2>
             <div className="h-1 w-16 bg-gradient-to-r from-primary to-accent rounded mx-auto mt-2 mb-8"></div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
             <div className="animate-fade-in">
-              <div className="relative rounded-2xl shadow-2xl bg-white dark:bg-gray-900 p-1">
+              <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden">
                 <img
                   src="/attached_assets/KKB.jpg"
                   alt="Kristi Kunworee Baishya"
-                  className="w-full max-h-[500px] rounded-xl object-cover"
+                  className="w-full h-auto object-contain rounded-t-xl"
                 />
-              </div>
-              <div className="mt-6 md:ml-6">
-                <Card className="bg-primary text-white transform transition-transform hover:scale-[1.01]">
-                  <CardContent className="p-4">
-                    <p className="font-heading font-bold text-center">
-                      "Building AI solutions that are impactful, responsible, and scalable."
-                    </p>
-                  </CardContent>
-                </Card>
+                <div className="p-4 bg-primary text-white">
+                  <p className="font-heading font-bold text-center">
+                    "Building AI solutions that are impactful, responsible, and scalable."
+                  </p>
+                </div>
               </div>
             </div>
             <div className="animate-slide-in-right">
