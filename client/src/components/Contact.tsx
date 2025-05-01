@@ -85,9 +85,9 @@ const Contact = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <Card className="bg-white dark:bg-gray-800">
-              <CardContent className="p-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <Card className="bg-white dark:bg-gray-800 w-full">
+              <CardContent className="p-6">
                 <h3 className="text-xl font-heading font-bold text-gray-800 dark:text-white mb-6">
                   Send Me a Message
                 </h3>
@@ -164,9 +164,9 @@ const Contact = () => {
               </CardContent>
             </Card>
 
-            <div className="space-y-8">
-              <Card className="bg-white dark:bg-gray-800">
-                <CardContent className="p-8">
+            <div className="space-y-6">
+              <Card className="bg-white dark:bg-gray-800 w-full">
+                <CardContent className="p-6">
                   <h3 className="text-xl font-heading font-bold text-gray-800 dark:text-white mb-6">
                     Contact Information
                   </h3>
@@ -188,11 +188,11 @@ const Contact = () => {
                       <div className="flex-shrink-0 h-10 w-10 rounded-full bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center mr-4">
                         <FaEnvelope className="text-primary dark:text-primary" />
                       </div>
-                      <div>
+                      <div className="max-w-[300px]">
                         <h4 className="text-base font-medium text-gray-800 dark:text-white">
                           Email
                         </h4>
-                        <p className="text-gray-600 dark:text-gray-300 whitespace-nowrap">
+                        <p className="text-gray-600 dark:text-gray-300 break-words">
                           kristibaishya@gmail.com | kbaishya@alumni.cmu.edu
                         </p>
                       </div>
@@ -213,13 +213,13 @@ const Contact = () => {
                 </CardContent>
               </Card>
 
-              <Card className="bg-white dark:bg-gray-800">
-                <CardContent className="p-8">
+              <Card className="bg-white dark:bg-gray-800 w-full">
+                <CardContent className="p-6">
                   <h3 className="text-xl font-heading font-bold text-gray-800 dark:text-white mb-6">
                     Connect with Me
                   </h3>
 
-                  <div className="flex space-x-6">
+                  <div className="flex justify-center space-x-8">
                     <a
                       href="https://linkedin.com/in/kristibaishya"
                       target="_blank"
