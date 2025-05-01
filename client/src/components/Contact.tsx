@@ -192,12 +192,20 @@ const Contact = () => {
                         <h4 className="text-base font-medium text-gray-800 dark:text-white">
                           Email
                         </h4>
-                        <a
-                          href="mailto:kristibaishya@gmail.com"
-                          className="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
-                        >
-                          kristibaishya@gmail.com
-                        </a>
+                        <div className="space-y-1">
+                          <a
+                            href="mailto:kristibaishya@gmail.com"
+                            className="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors block"
+                          >
+                            kristibaishya@gmail.com
+                          </a>
+                          <a
+                            href="mailto:kbaishya@alumni.cmu.edu"
+                            className="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors block"
+                          >
+                            kbaishya@alumni.cmu.edu
+                          </a>
+                        </div>
                       </div>
                     </div>
 

@@ -55,13 +55,18 @@ const Hero = () => {
                 <span className="sr-only">GitHub</span>
                 <FaGithub className="text-2xl" />
               </a>
-              <a
-                href="mailto:kristibaishya@gmail.com"
-                className="text-gray-600 hover:text-primary dark:text-gray-400 dark:hover:text-primary transition-colors"
-              >
-                <span className="sr-only">Email</span>
-                <FaEnvelope className="text-2xl" />
-              </a>
+              <div className="flex flex-col items-center">
+                <a
+                  href="mailto:kristibaishya@gmail.com"
+                  className="text-gray-600 hover:text-primary dark:text-gray-400 dark:hover:text-primary transition-colors"
+                >
+                  <span className="sr-only">Email</span>
+                  <FaEnvelope className="text-2xl" />
+                </a>
+                <span className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                  kristibaishya@gmail.com | kbaishya@alumni.cmu.edu
+                </span>
+              </div>
             </div>
           </div>
           <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
