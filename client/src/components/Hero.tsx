@@ -63,9 +63,11 @@ const Hero = () => {
                   <span className="sr-only">Email</span>
                   <FaEnvelope className="text-2xl" />
                 </a>
-                <span className="text-xs text-gray-500 dark:text-gray-400 mt-1">
-                  kristibaishya@gmail.com | kbaishya@alumni.cmu.edu
-                </span>
+                <div className="flex items-center text-xs text-gray-500 dark:text-gray-400 mt-1 gap-1 flex-wrap justify-center">
+                  <a href="mailto:kristibaishya@gmail.com" className="hover:text-primary transition-colors">kristibaishya@gmail.com</a>
+                  <span>|</span>
+                  <a href="mailto:kbaishya@alumni.cmu.edu" className="hover:text-primary transition-colors">kbaishya@alumni.cmu.edu</a>
+                </div>
               </div>
             </div>
           </div>
