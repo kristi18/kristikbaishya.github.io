@@ -16,11 +16,11 @@ const About = () => {
             <div className="relative animate-fade-in">
               <div className="relative rounded-2xl overflow-hidden shadow-xl">
                 <img
-                  src="https://images.unsplash.com/photo-1581092335397-9fa73b7af543?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&h=1000&q=80"
-                  alt="Modern technology abstract image"
-                  className="w-full h-auto"
+                  src="/attached_assets/KKB.jpg"
+                  alt="Kristi Kunworee Baishya"
+                  className="w-full h-auto object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/50"></div>
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/30"></div>
               </div>
               <div className="absolute -bottom-6 -right-6 hidden md:block">
                 <Card className="bg-primary text-white">

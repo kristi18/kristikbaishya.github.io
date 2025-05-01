@@ -3,6 +3,7 @@ import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import path from "path";
 import fs from "fs";
+import express from "express";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Contact form endpoint
@@ -45,6 +46,9 @@ export async function registerRoutes(app: Express): Promise<Server> {
       res.status(500).json({ message: "Error downloading resume" });
     }
   });
+  
+  // Serve attached assets
+  app.use('/attached_assets', express.static(path.join(process.cwd(), 'attached_assets')));
 
   const httpServer = createServer(app);
 

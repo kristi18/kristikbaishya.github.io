@@ -1,7 +1,8 @@
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Download } from "lucide-react";
 import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 import ParticlesBackground from "./ParticlesBackground";
 import { Button } from "@/components/ui/button";
+import { downloadResume } from "@/lib/utils";
 
 const Hero = () => {
   return (
@@ -13,7 +14,7 @@ const Hero = () => {
             <div className="inline-block mb-6 relative">
               <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent rounded-full opacity-20 animate-pulse-slow"></div>
               <img
-                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&h=200&q=80"
+                src="/attached_assets/KKB.jpg"
                 alt="Kristi Kunworee Baishya"
                 className="w-32 h-32 md:w-40 md:h-40 object-cover rounded-full shadow-lg border-4 border-white dark:border-gray-800"
               />
@@ -31,6 +32,9 @@ const Hero = () => {
               </Button>
               <Button variant="outline" size="lg" asChild>
                 <a href="#projects">View Projects</a>
+              </Button>
+              <Button variant="secondary" size="lg" onClick={downloadResume} className="flex items-center">
+                Download Resume <Download className="ml-2 h-4 w-4" />
               </Button>
             </div>
             <div className="flex items-center mt-12 space-x-6">
