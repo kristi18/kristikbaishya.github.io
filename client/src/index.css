@@ -188,8 +188,9 @@
   animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
-/* Professional Background Animation Styles */
-canvas {
-  display: block;
+/* Professional Background Styles */
+.blur-gradient {
+  filter: blur(120px);
+  transform: translate3d(0, 0, 0);
   backface-visibility: hidden;
 }
