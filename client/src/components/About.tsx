@@ -15,11 +15,14 @@ const About = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
             <div className="animate-fade-in">
               <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden">
-                <img
-                  src="/attached_assets/KKB.jpg"
-                  alt="Kristi Kunworee Baishya"
-                  className="w-full h-auto object-contain rounded-t-xl"
-                />
+                <div className="flex justify-center items-center p-4">
+                  <img
+                    src="/attached_assets/KKB.jpg"
+                    alt="Kristi Kunworee Baishya"
+                    className="max-w-full h-auto max-h-[400px] object-contain"
+                    style={{ width: 'auto' }}
+                  />
+                </div>
                 <div className="p-4 bg-primary text-white">
                   <p className="font-heading font-bold text-center">
                     "Building AI solutions that are impactful, responsible, and scalable."
