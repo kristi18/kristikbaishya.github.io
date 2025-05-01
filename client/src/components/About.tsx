@@ -13,19 +13,18 @@ const About = () => {
             <div className="h-1 w-16 bg-gradient-to-r from-primary to-accent rounded mx-auto mt-2 mb-8"></div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div className="relative animate-fade-in">
-              <div className="relative rounded-2xl overflow-hidden shadow-xl">
+            <div className="animate-fade-in">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <img
                   src="/attached_assets/KKB.jpg"
                   alt="Kristi Kunworee Baishya"
                   className="w-full h-auto object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/30"></div>
               </div>
-              <div className="absolute -bottom-6 -right-6 hidden md:block">
-                <Card className="bg-primary text-white">
+              <div className="mt-6 md:ml-6">
+                <Card className="bg-primary text-white transform transition-transform hover:scale-[1.01]">
                   <CardContent className="p-4">
-                    <p className="font-heading font-bold">
+                    <p className="font-heading font-bold text-center">
                       "Building AI solutions that are impactful, responsible, and scalable."
                     </p>
                   </CardContent>

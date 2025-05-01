@@ -11,12 +11,11 @@ const Hero = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 relative z-10">
         <div className="max-w-4xl mx-auto">
           <div className="flex flex-col items-center text-center animate-fade-in">
-            <div className="inline-block mb-6 relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent rounded-full opacity-20 animate-pulse-slow"></div>
+            <div className="inline-block mb-6">
               <img
                 src="/attached_assets/KKB.jpg"
                 alt="Kristi Kunworee Baishya"
-                className="w-32 h-32 md:w-40 md:h-40 object-cover rounded-full shadow-lg border-4 border-white dark:border-gray-800"
+                className="w-40 h-40 md:w-48 md:h-48 object-cover rounded-full shadow-xl border-4 border-white dark:border-gray-800"
               />
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-4 bg-gradient-text">
