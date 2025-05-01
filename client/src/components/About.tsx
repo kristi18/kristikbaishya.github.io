@@ -14,11 +14,11 @@ const About = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in">
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+              <div className="relative rounded-2xl shadow-2xl bg-white dark:bg-gray-900 p-1">
                 <img
                   src="/attached_assets/KKB.jpg"
                   alt="Kristi Kunworee Baishya"
-                  className="w-full h-auto object-cover"
+                  className="w-full max-h-[500px] rounded-xl object-cover"
                 />
               </div>
               <div className="mt-6 md:ml-6">
