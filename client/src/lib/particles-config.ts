@@ -1,12 +1,11 @@
-import type { ISourceOptions } from "tsparticles-engine";
-
-export const particlesConfig: ISourceOptions = {
+// Using 'any' to avoid version type conflicts
+export const particlesConfig: any = {
   particles: {
     number: {
       value: 30,
       density: {
         enable: true,
-        value_area: 800
+        area: 800
       }
     },
     color: {
@@ -18,24 +17,24 @@ export const particlesConfig: ISourceOptions = {
     opacity: {
       value: 0.5,
       random: true,
-      anim: {
+      animation: {
         enable: true,
         speed: 1,
-        opacity_min: 0.1,
+        minimumValue: 0.1,
         sync: false
       }
     },
     size: {
       value: 5,
       random: true,
-      anim: {
+      animation: {
         enable: true,
         speed: 2,
-        size_min: 0.1,
+        minimumValue: 0.1,
         sync: false
       }
     },
-    line_linked: {
+    links: {
       enable: true,
       distance: 150,
       color: "#3B82F6",
@@ -48,8 +47,7 @@ export const particlesConfig: ISourceOptions = {
       direction: "none",
       random: true,
       straight: false,
-      out_mode: "out",
-      bounce: false,
+      outModes: "out",
       attract: {
         enable: false,
         rotateX: 600,
@@ -58,12 +56,13 @@ export const particlesConfig: ISourceOptions = {
     }
   },
   interactivity: {
+    detectsOn: "window",
     events: {
-      onhover: {
+      onHover: {
         enable: true,
         mode: "bubble"
       },
-      onclick: {
+      onClick: {
         enable: false
       },
       resize: true
@@ -78,5 +77,11 @@ export const particlesConfig: ISourceOptions = {
       }
     }
   },
-  retina_detect: true
+  detectRetina: true,
+  background: {
+    color: "transparent",
+    position: "50% 50%",
+    repeat: "no-repeat",
+    size: "cover"
+  }
 };
