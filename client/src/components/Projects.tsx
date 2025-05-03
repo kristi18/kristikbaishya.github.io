@@ -78,7 +78,7 @@ const Projects = () => {
             </h2>
             <div className="h-1 w-16 bg-gradient-to-r from-primary to-accent rounded mx-auto mt-2 mb-8"></div>
             <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              A showcase of AI and ML solutions that delivered significant business impact.
+              A showcase of strategic, enterprise-level AI products that delivered significant business impact.
             </p>
           </div>
 

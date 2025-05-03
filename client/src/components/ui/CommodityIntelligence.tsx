@@ -1,10 +1,10 @@
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
-import ProjectDetailDialog from "./project-detail-dialog";
-import { Icons } from "@/components/ui/icons";
+import ProjectDetailDialog, { ProjectDetailProps } from "./project-detail-dialog";
+import { FaChartLine, FaMoneyBillWave } from "react-icons/fa";
 
-const CommodityIntelligence = () => {
-  const projectData = {
+const CommodityIntelligence: React.FC = () => {
+  const projectData: ProjectDetailProps = {
     id: "commodity-intelligence-platform",
     image: "https://images.unsplash.com/photo-1535320903710-d993d3d77d29?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&h=400&q=80",
     category: "Strategic AI",
