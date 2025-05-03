@@ -221,7 +221,7 @@ const Contact = () => {
 
                   <div className="flex justify-center space-x-8">
                     <a
-                      href="https://linkedin.com/in/kristibaishya"
+                      href="https://www.linkedin.com/in/kristikbaishya/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex flex-col items-center hover:text-primary dark:hover:text-primary transition-colors"
