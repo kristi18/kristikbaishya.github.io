@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 import { useThemeDetector } from "@/hooks/use-theme";
+import { useActiveSection } from "@/hooks/use-active-section";
 import { Button } from "@/components/ui/button";
 import { Moon, Sun, Menu, X, Download } from "lucide-react";
 import { downloadResume } from "@/lib/utils";
@@ -9,6 +10,8 @@ const Navbar = () => {
   const { isDarkMode, toggleTheme } = useThemeDetector();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [location] = useLocation();
+  const activeSection = useActiveSection();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,13 +31,13 @@ const Navbar = () => {
   };
 
   const navLinks = [
-    { name: "Home", href: "/" },
-    { name: "About", href: "/#about" },
-    { name: "Experience", href: "/#experience" },
-    { name: "Projects", href: "/projects" },
-    { name: "Skills", href: "/#skills" },
-    { name: "Education", href: "/#education" },
-    { name: "Contact", href: "/#contact" },
+    { name: "Home", href: "/", id: "home" },
+    { name: "About", href: "/#about", id: "about" },
+    { name: "Experience", href: "/#experience", id: "experience" },
+    { name: "Projects", href: "/projects", id: "projects" },
+    { name: "Skills", href: "/#skills", id: "skills" },
+    { name: "Education", href: "/#education", id: "education" },
+    { name: "Contact", href: "/#contact", id: "contact" },
   ];
 
   return (
@@ -47,15 +50,29 @@ const Navbar = () => {
             </Link>
           </div>
           <div className="hidden md:ml-6 md:flex md:items-center md:space-x-6">
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-primary dark:text-gray-300 dark:hover:text-white transition-colors"
-              >
-                {link.name}
-              </a>
-            ))}
+            {navLinks.map((link) => {
+              const isActive = 
+                (link.id === activeSection) || 
+                (link.id === 'home' && activeSection === '') || 
+                (link.id === 'projects' && location === '/projects');
+                
+              return (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  className={`px-3 py-2 text-sm font-medium transition-colors relative ${
+                    isActive 
+                      ? "text-primary dark:text-white font-semibold" 
+                      : "text-gray-700 hover:text-primary dark:text-gray-300 dark:hover:text-white"
+                  }`}
+                >
+                  {link.name}
+                  {isActive && (
+                    <span className="absolute -bottom-0.5 left-0 right-0 h-0.5 bg-primary dark:bg-white mx-3 rounded-full" />
+                  )}
+                </a>
+              );
+            })}
             <Button 
               variant="ghost" 
               size="icon" 
@@ -93,16 +110,30 @@ const Navbar = () => {
       {/* Mobile menu */}
       <div className={`md:hidden bg-white dark:bg-gray-900 shadow-md ${isMobileMenuOpen ? "block" : "hidden"}`}>
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-          {navLinks.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              onClick={closeMobileMenu}
-              className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary dark:text-gray-300 dark:hover:text-white transition-colors"
-            >
-              {link.name}
-            </a>
-          ))}
+          {navLinks.map((link) => {
+            const isActive = 
+              (link.id === activeSection) || 
+              (link.id === 'home' && activeSection === '') || 
+              (link.id === 'projects' && location === '/projects');
+              
+            return (
+              <a
+                key={link.name}
+                href={link.href}
+                onClick={closeMobileMenu}
+                className={`block px-3 py-2 text-base font-medium transition-colors relative ${
+                  isActive 
+                    ? "text-primary dark:text-white font-semibold" 
+                    : "text-gray-700 hover:text-primary dark:text-gray-300 dark:hover:text-white"
+                }`}
+              >
+                {link.name}
+                {isActive && (
+                  <span className="absolute -left-1 top-0 bottom-0 w-0.5 bg-primary dark:bg-white rounded-full" />
+                )}
+              </a>
+            );
+          })}
           <div className="flex items-center justify-between mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
             <Button 
               variant="ghost" 
