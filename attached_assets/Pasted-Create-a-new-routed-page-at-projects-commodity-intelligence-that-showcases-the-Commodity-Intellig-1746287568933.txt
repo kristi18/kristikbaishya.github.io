@@ -1,0 +1,97 @@
+Create a new routed page at `/projects/commodity-intelligence` that showcases the Commodity Intelligence Platform in a clear, executive-quality structure.
+
+Keep the styling consistent with the rest of the portfolio. Avoid animation or motion effects.
+
+Here’s the content layout to follow:
+
+–––––––––––––––––––––––––––––––––––––––––––––––––––
+
+🟣 Section 1: Header
+- Title: “Commodity Intelligence Platform”
+- Subheader: “Strategic multi-signal AI system for bulk commodity trading optimization.”
+- Background banner: Use a stylized visual of financial charts or maritime shipping.
+- Include tags like: Predictive AI, Humble AI, NLP Sentiment, AIS Tracking, Time Series Forecasting
+
+–––––––––––––––––––––––––––––––––––––––––––––––––––
+
+🔹 Section 2: Executive Overview
+- Brief: 
+> Developed an enterprise-grade Commodity Intelligence Platform integrating predictive analytics, shipping activity, and sentiment signals to enhance bulk trading decisions. 
+> Delivered 400%+ RoCE on a $1.3B portfolio and enabled new derivatives trading revenue through freight rate forecasting.
+
+–––––––––––––––––––––––––––––––––––––––––––––––––––
+
+🔹 Section 3: Key Use Cases (2-column layout with icons)
+| Use Case | Outcome |
+| -------- | ------- |
+| Predict Baltic 5TC Freight Index | Improved timing for freight charters and FFAs |
+| Forecast Coal & Iron Ore Prices | Enabled proactive hedging decisions |
+| AIS Vessel Movement Analysis | Detected port-level demand/supply shifts |
+| Sentiment Tracking (Twitter) | Anticipated price swings from market sentiment |
+| Crude Oil Macro Exposure Modeling | Enhanced macro hedge optimization |
+
+–––––––––––––––––––––––––––––––––––––––––––––––––––
+
+🔹 Section 4: Architecture Snapshot
+Present a simplified visual block (or image placeholder) with the following layers:
+
+1. **Data Sources**
+   - Commodity pricing APIs
+   - AIS maritime data feeds
+   - Twitter streaming API
+   - Macroeconomic indicators
+
+2. **Feature Engineering**
+   - Ship movement trend aggregation
+   - Time-series lag features
+   - Twitter sentiment scoring
+
+3. **Predictive Modeling**
+   - XGBoost, ARIMA hybrids
+   - Multiple time horizons (1–2 weeks, 1–2 months)
+
+4. **Humble AI Guardrails**
+   - Uncertainty tracking
+   - Volatility scores
+   - Manual override flows
+
+5. **Optimization & Insights**
+   - Entry/exit recommendation logic
+   - FFA strategy signals
+
+6. **Delivery**
+   - Internal dashboards (Tableau/Python Dash)
+   - Alerts and confidence scores
+
+–––––––––––––––––––––––––––––––––––––––––––––––––––
+
+🔹 Section 5: Business Impact
+Use stat blocks or infographics (you can use “xxxx” for numbers that shouldn’t be disclosed):
+- ✅ 400%+ Annualized RoCE on $1.3B portfolio
+- ✅ Expansion into FFA derivatives = New revenue stream
+- ✅ Sharpe ratio improvement from volatility-adjusted decision-making
+- ✅ First-of-its-kind AIS + Sentiment integration for commodity trading at the firm
+
+–––––––––––––––––––––––––––––––––––––––––––––––––––
+
+🔹 Section 6: Strategic Principles
+Show as 3 visual blocks or cards:
+- Humble AI: Always-on uncertainty handling to avoid overconfident automation
+- Multi-Signal Intelligence: Integrating real-world logistics + sentiment + pricing
+- Trader-Centric Design: AI-assisted, not AI-replacing — empowering better decisions
+
+–––––––––––––––––––––––––––––––––––––––––––––––––––
+
+🔹 Section 7: Reflection / Legacy
+Subheader: "Beyond Models — Building a New Trading Mindset"
+Text: 
+> This initiative shifted trading culture from reactive, lagging-indicator-based decisions to forward-looking, AI-supported strategies. It laid the foundation for predictive analytics expansion into other commodities and set a benchmark for intelligence-led trading transformation.
+
+–––––––––––––––––––––––––––––––––––––––––––––––––––
+
+🔹 Section 8: Back Button
+Simple link to go back to `/projects`
+
+–––––––––––––––––––––––––––––––––––––––––––––––––––
+
+Make the design modern but minimal — prioritize clear, scannable reading over flashy elements.

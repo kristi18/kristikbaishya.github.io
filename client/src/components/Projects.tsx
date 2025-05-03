@@ -1,7 +1,8 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ProjectCard from "./ui/project-card";
-import CommodityIntelligence from "./ui/CommodityIntelligence";
+// Import directly from the TypeScript file
+import CommodityIntelligence from "@/components/ui/CommodityIntelligence";
 import { FaChartLine, FaShieldAlt, FaClock, FaAward } from "react-icons/fa";
 
 const Projects = () => {
