@@ -230,11 +230,13 @@ const CommodityIntelligencePage: React.FC = () => {
 
         {/* Section 8: Back Button */}
         <section className="max-w-4xl mx-auto">
-          <Link href="/projects">
-            <Button variant="outline" className="flex items-center">
-              <ArrowLeft className="mr-2 h-4 w-4" /> Back to Projects
-            </Button>
-          </Link>
+          <Button 
+            variant="outline" 
+            className="flex items-center"
+            onClick={() => window.location.href = "/projects"}
+          >
+            <ArrowLeft className="mr-2 h-4 w-4" /> Back to Projects
+          </Button>
         </section>
       </div>
     </div>
