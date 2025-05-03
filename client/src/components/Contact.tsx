@@ -234,47 +234,14 @@ const Contact = () => {
                       </span>
                     </a>
 
-                    <a
-                      href="https://github.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex flex-col items-center hover:text-primary dark:hover:text-primary transition-colors"
-                    >
+                    <div className="flex flex-col items-center opacity-60 cursor-default">
                       <div className="h-12 w-12 rounded-full bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center mb-2">
                         <FaGithub className="text-xl text-primary dark:text-primary" />
                       </div>
-                      <span className="text-sm font-medium text-gray-800 dark:text-white">
-                        GitHub
+                      <span className="text-sm font-medium text-gray-800 dark:text-white flex items-center">
+                        GitHub <span className="ml-1 text-xs bg-gray-200 dark:bg-gray-700 px-1.5 py-0.5 rounded-full">Soon</span>
                       </span>
-                    </a>
-
-                    <a
-                      href="https://twitter.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex flex-col items-center hover:text-primary dark:hover:text-primary transition-colors"
-                    >
-                      <div className="h-12 w-12 rounded-full bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center mb-2">
-                        <FaTwitter className="text-xl text-primary dark:text-primary" />
-                      </div>
-                      <span className="text-sm font-medium text-gray-800 dark:text-white">
-                        Twitter
-                      </span>
-                    </a>
-
-                    <a
-                      href="https://medium.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex flex-col items-center hover:text-primary dark:hover:text-primary transition-colors"
-                    >
-                      <div className="h-12 w-12 rounded-full bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center mb-2">
-                        <FaMediumM className="text-xl text-primary dark:text-primary" />
-                      </div>
-                      <span className="text-sm font-medium text-gray-800 dark:text-white">
-                        Medium
-                      </span>
-                    </a>
+                    </div>
                   </div>
                 </CardContent>
               </Card>

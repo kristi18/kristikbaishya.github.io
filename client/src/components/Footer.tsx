@@ -22,15 +22,14 @@ const Footer = () => {
                 <span className="sr-only">LinkedIn</span>
                 <FaLinkedinIn className="text-xl" />
               </a>
-              <a
-                href="https://github.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors"
+              <span
+                className="text-gray-600 opacity-60 cursor-default flex items-center"
+                title="Coming Soon"
               >
-                <span className="sr-only">GitHub</span>
+                <span className="sr-only">GitHub (Coming Soon)</span>
                 <FaGithub className="text-xl" />
-              </a>
+                <span className="ml-1 text-xs bg-gray-700 text-gray-300 px-1.5 py-0.5 rounded-full">Soon</span>
+              </span>
               <a
                 href="mailto:kristibaishya@gmail.com"
                 className="text-gray-400 hover:text-white transition-colors"

@@ -46,15 +46,14 @@ const Hero = () => {
                 <span className="sr-only">LinkedIn</span>
                 <FaLinkedin className="text-2xl" />
               </a>
-              <a
-                href="https://github.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-600 hover:text-primary dark:text-gray-400 dark:hover:text-primary transition-colors"
+              <span
+                className="text-gray-600 opacity-60 cursor-default flex items-center"
+                title="Coming Soon"
               >
-                <span className="sr-only">GitHub</span>
+                <span className="sr-only">GitHub (Coming Soon)</span>
                 <FaGithub className="text-2xl" />
-              </a>
+                <span className="ml-1 text-xs bg-gray-200 dark:bg-gray-700 px-1.5 py-0.5 rounded-full text-gray-700 dark:text-gray-300">Soon</span>
+              </span>
               <div className="flex flex-col items-center">
                 <a
                   href="mailto:kristibaishya@gmail.com"
