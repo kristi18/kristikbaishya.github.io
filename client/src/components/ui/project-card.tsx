@@ -1,6 +1,9 @@
 import { Card, CardContent } from "@/components/ui/card";
 
-interface ProjectCardProps {
+import ProjectDetailDialog from "./project-detail-dialog";
+
+export interface ProjectCardProps {
+  id?: string;
   image: string;
   category: string;
   title: string;
@@ -11,9 +14,12 @@ interface ProjectCardProps {
   impact2: string;
   impact2Icon: string;
   categoryColor: string;
+  fullDescription?: string;
+  onClick?: () => void;
 }
 
 const ProjectCard = ({
+  id,
   image,
   category,
   title,
@@ -24,14 +30,19 @@ const ProjectCard = ({
   impact2,
   impact2Icon,
   categoryColor,
+  fullDescription,
+  onClick,
 }: ProjectCardProps) => {
-  return (
-    <Card className="project-card overflow-hidden">
+  const projectContent = (
+    <Card 
+      className="project-card overflow-hidden cursor-pointer hover:shadow-lg transition-shadow duration-300"
+      onClick={onClick}
+    >
       <div className="relative h-48 overflow-hidden">
         <img
           src={image}
           alt={title}
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
         />
         <div className={`absolute top-0 right-0 ${categoryColor} text-white px-3 py-1 text-sm font-medium`}>
           {category}
@@ -54,17 +65,41 @@ const ProjectCard = ({
             </span>
           ))}
         </div>
-        <div className="flex items-center justify-between">
-          <span className="text-emerald-600 dark:text-emerald-400 text-sm font-medium">
-            <i className={impact1Icon} /> {impact1}
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+          <span className="text-emerald-600 dark:text-emerald-400 text-sm font-medium flex items-center">
+            <i className={impact1Icon}></i> {impact1}
           </span>
-          <span className="text-amber-600 dark:text-amber-400 text-sm font-medium">
-            <i className={impact2Icon} /> {impact2}
+          <span className="text-amber-600 dark:text-amber-400 text-sm font-medium flex items-center">
+            <i className={impact2Icon}></i> {impact2}
           </span>
         </div>
       </CardContent>
     </Card>
   );
+
+  // If there's a full description, wrap in dialog
+  if (fullDescription) {
+    return (
+      <ProjectDetailDialog
+        id={id}
+        image={image}
+        category={category}
+        title={title}
+        description={description}
+        tags={tags}
+        impact1={impact1}
+        impact1Icon={impact1Icon}
+        impact2={impact2}
+        impact2Icon={impact2Icon}
+        categoryColor={categoryColor}
+        fullDescription={fullDescription}
+      >
+        {projectContent}
+      </ProjectDetailDialog>
+    );
+  }
+
+  return projectContent;
 };
 
 export default ProjectCard;

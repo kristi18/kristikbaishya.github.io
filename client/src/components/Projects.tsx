@@ -1,6 +1,8 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ProjectCard from "./ui/project-card";
+import CommodityIntelligence from "./ui/CommodityIntelligence";
+import { FaChartLine, FaShieldAlt, FaClock, FaAward } from "react-icons/fa";
 
 const Projects = () => {
   const projectsData = [
@@ -27,18 +29,6 @@ const Projects = () => {
       impact2: "Enhanced Compliance",
       impact2Icon: "fas fa-shield-alt mr-1",
       categoryColor: "bg-secondary"
-    },
-    {
-      image: "https://images.unsplash.com/photo-1535320903710-d993d3d77d29?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&h=400&q=80",
-      category: "AI",
-      title: "Trading AI Solution",
-      description: "End-to-end trading solution using predictive AI and optimization methods for commodity price forecasting.",
-      tags: ["Predictive Modeling", "Optimization", "Financial AI"],
-      impact1: "400% RoCE on $1.3B",
-      impact1Icon: "fas fa-percentage mr-1",
-      impact2: "New Revenue Stream",
-      impact2Icon: "fas fa-chart-pie mr-1",
-      categoryColor: "bg-accent"
     },
     {
       image: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&h=400&q=80",
@@ -93,6 +83,10 @@ const Projects = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Commodity Intelligence Platform (Featured first) */}
+            <CommodityIntelligence />
+
+            {/* Other projects */}
             {projectsData.map((project, index) => (
               <ProjectCard
                 key={index}
